@@ -1,0 +1,126 @@
+body {
+  background: #f1f1f1;
+  height: 2000px;
+}
+
+.nav-content {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between !important;
+  transition: transform .5s cubic-bezier(.685, .0473, .346, 1);
+}
+
+.navegacao-lateral-open {
+  display: none;
+}
+
+.estrutura .navegacao-lateral {
+  width: 270px;
+  min-height: 100%;
+  background: white;
+  padding-top: 70px;
+  position: fixed;
+  z-index: 999;
+  transition: all ease .35s;
+}
+
+.estrutura .navegacao-lateral .cover {
+  height: 170px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.estrutura .navegacao-lateral .user-photo img {
+  max-width: 70px;
+  max-height: 70px;
+  margin: 18px 10px;
+}
+
+.estrutura .navegacao-lateral .user-name {
+  margin-top: 0px;
+  width: 100%;
+  padding: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  background: transparent;
+  color: rgb(233, 227, 227);
+  height: 39px;
+}
+
+.open {
+  left: 0 !important;
+}
+
+.estrutura .navegacao-lateral .user-name:hover {
+  background: rgba(131, 120, 121, 0.27);
+}
+
+.estrutura .content {
+  padding-top: 100px;
+  padding-left: 270px;
+}
+
+.navegacao {
+  padding: 0;
+  margin: 0;
+}
+
+.navegacao li {
+  list-style-type: none;
+}
+
+.navegacao li a {
+  font-size: 15px;
+  position: relative;
+  color: #908787;
+  background-color: transparent;
+  position: relative;
+  display: block;
+  line-height: 48px;
+  padding-left: 16px;
+  font-weight: 520;
+  transition: all 0.2s ease-in-out;
+}
+
+.navegacao li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.navegacao li a i {
+  margin-right: 20px;
+  font-size: 24px;
+}
+
+.navegacao .active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.navegacao .line {
+  background-color: #bdbdbd;
+  position: relative;
+  display: block;
+  height: 1px;
+  margin: 8px 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navegacao-lateral .top-bar {
+  height: 25px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 985px) {
+  .estrutura .navegacao-lateral {
+    left: -270px;
+    transition: all ease .35s;
+  }
+  .estrutura .content {
+    padding-left: 0px;
+  }
+  .navegacao-lateral-open {
+    display: inline-block;
+  }
+}
